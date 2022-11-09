@@ -6,7 +6,7 @@ import axios from 'axios'
 import Web3Modal from 'web3modal'
 
 
-import { NFTMarketplace , marketplaceAddress} from "../constants";
+import { NFT_MARKETPLACE_ABI , NFT_MARKETPLACE_ADDRESS} from "../constants";
 
 
 export default function ResellNFT() {
@@ -33,7 +33,7 @@ export default function ResellNFT() {
     const signer = provider.getSigner()
 
     const priceFormatted = utils.parseUnits(formInput.price, 'ether')
-    let contract = new Contract(marketplaceAddress, NFTMarketplace, signer)
+    let contract = new Contract(NFT_MARKETPLACE_ADDRESS, NFT_MARKETPLACE_ABI, signer)
     let listingPrice = await contract.getListingPrice()
 
     listingPrice = listingPrice.toString()
