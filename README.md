@@ -11,3 +11,6 @@
 
 `Valist project URL`
 # https://app.valist.io/theonnfts/theonnfts
+
+`live website url`
+# https://nft-marketplace-theonrex.vercel.app/
